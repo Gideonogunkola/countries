@@ -8,6 +8,7 @@ module.exports = {
   ],
   darkMode: "class", // or 'media' or 'class'
   theme: {
+    darkSelector: ".dark-mode",
     extend: {
       colors: {
         lightMode: {
@@ -30,6 +31,7 @@ module.exports = {
       "dark-even",
       "dark-odd",
       "hover",
+      "focus",
       "responsive"
     ],
     borderColor: [
@@ -37,9 +39,10 @@ module.exports = {
       "dark-focus",
       "dark-focus-within",
       "hover",
+      "focus",
       "responsive"
     ],
     textColor: ["dark", "dark-hover", "dark-active", "hover", "responsive"]
   },
-  plugins: [require("tailwindcss-dark-mode")()]
+  plugins: [require("@tailwindcss/forms"), require("tailwindcss-dark-mode")()]
 };
