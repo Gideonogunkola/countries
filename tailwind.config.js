@@ -19,6 +19,14 @@ module.exports = {
         darkMode: {
           element: "hsl(209, 23%, 22%)",
           bg: "hsl(207, 26%, 17%)"
+        },
+        spacing: {
+          "68": "17rem",
+          "98": "26rem"
+        },
+        width: {
+          "68": "17rem",
+          "98": "26rem"
         }
       }
     }

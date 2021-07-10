@@ -1,6 +1,6 @@
 <template>
   <div class="mt-10">
-    <div class="flex justify-between relative">
+    <div class="justify-between relative">
       <input
         type="search"
         class="w-2/6 h-14 rounded bg-white shadow dark:bg-darkMode-element border-0 focus:border-transparent focus:ring-0 px-14"
