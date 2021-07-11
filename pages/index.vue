@@ -3,7 +3,9 @@
     <div>
       <Form />
     </div>
-    <h1 v-if="getFetchLoading" class="text-4xl">Loading.....</h1>
+    <h1 v-if="getFetchLoading" class="text-xl lg:text-3xl text-center">
+      Loading.....
+    </h1>
     <div v-else class="flex justify-center lg:justify-between flex-wrap">
       <div v-for="country in allCountries" :key="country.id" class="mt-14">
         <div>
@@ -14,7 +16,7 @@
               <img
                 class=" rounded-t h-44 object-cover w-full"
                 :src="country.flag"
-                alt=""
+                alt="country-flag"
               />
               <div class="pt-6 pl-6">
                 <h3 class=" text-xl font-medium">{{ country.name }}</h3>
