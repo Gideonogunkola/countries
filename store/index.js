@@ -19,11 +19,9 @@ export const actions = {
   async fetchCountries({ commit }) {
     commit("SET_FETCH_LOADING", true);
     try {
-      console.log("just testing");
       const countries = await this.$axios.$get(
         "https://restcountries.eu/rest/v2/all"
       );
-      console.log(countries);
       commit("SET_COUNTRY", countries);
       commit("SET_FETCH_LOADING", false);
     } catch (error) {

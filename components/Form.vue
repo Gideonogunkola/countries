@@ -1,15 +1,19 @@
 <template>
   <div class="mt-10">
-    <div class="justify-between relative">
-      <input
-        type="search"
-        class="w-2/6 h-14 rounded bg-white shadow dark:bg-darkMode-element border-0 focus:border-transparent focus:ring-0 px-14"
-      />
-      <font-awesome-icon
-        class="absolute top-5 left-8"
-        :icon="['fas', 'search']"
-      />
-      <div>
+    <div
+      class="grid grid-cols-1 gap-y-4 lg:grid-cols-3 justify-between relative"
+    >
+      <div class=" col-span-2">
+        <input
+          type="search"
+          class="w-full lg:w-4/6 h-14 rounded bg-white shadow dark:bg-darkMode-element border-0 focus:border-transparent focus:ring-0 px-14"
+        />
+        <font-awesome-icon
+          class="absolute top-5 left-8"
+          :icon="['fas', 'search']"
+        />
+      </div>
+      <div class="lg:justify-self-end">
         <select
           class=" h-14 rounded bg-white shadow dark:bg-darkMode-element border-0 focus:border-transparent focus:ring-0"
         >

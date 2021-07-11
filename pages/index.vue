@@ -7,17 +7,23 @@
     <div v-else class="flex justify-center lg:justify-between flex-wrap">
       <div v-for="country in allCountries" :key="country.id" class="mt-14">
         <div>
-          <div
-            class="w-72 h-96 bg-lightMode-bg dark:bg-darkMode-element shadow-md rounded"
-          >
-            <img class=" rounded-t w-full" :src="country.flag" alt="" />
-            <div class="pt-6 pl-6">
-              <h3 class=" text-xl font-medium">{{ country.name }}</h3>
-              <p class="pt-6">Population: {{ country.population }}</p>
-              <p class="pt-1">Region: {{ country.region }}</p>
-              <p class="pt-1">Capital: {{ country.capital }}</p>
+          <nuxt-link :to="country.name">
+            <div
+              class="w-72 h-96 bg-lightMode-bg dark:bg-darkMode-element shadow-md rounded"
+            >
+              <img
+                class=" rounded-t h-44 object-cover w-full"
+                :src="country.flag"
+                alt=""
+              />
+              <div class="pt-6 pl-6">
+                <h3 class=" text-xl font-medium">{{ country.name }}</h3>
+                <p class="pt-4">Population: {{ country.population }}</p>
+                <p class="pt-1">Region: {{ country.region }}</p>
+                <p class="pt-1">Capital: {{ country.capital }}</p>
+              </div>
             </div>
-          </div>
+          </nuxt-link>
         </div>
       </div>
     </div>
