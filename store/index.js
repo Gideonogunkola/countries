@@ -4,14 +4,10 @@ export const state = () => ({
   fetchloading: false
 });
 
-//mutation
-export const mutations = {
-  SET_COUNTRY(state, countries) {
-    state.countries = countries;
-  },
-  SET_FETCH_LOADING(state, loading) {
-    state.fetchloading = loading;
-  }
+//getters
+export const getters = {
+  allCountries: state => state.countries,
+  getFetchLoading: state => state.fetchloading
 };
 
 //  action
@@ -31,8 +27,12 @@ export const actions = {
   }
 };
 
-//getters
-export const getters = {
-  allCountries: state => state.countries,
-  getFetchLoading: state => state.fetchloading
+//mutation
+export const mutations = {
+  SET_COUNTRY(state, countries) {
+    state.countries = countries;
+  },
+  SET_FETCH_LOADING(state, loading) {
+    state.fetchloading = loading;
+  }
 };
