@@ -98,7 +98,7 @@
           <div
             v-for="(border, index) in country[0].borders"
             :key="index"
-            class="flex"
+            class="flex flex-wrap"
           >
             <div
               class=" mr-3 py-1 px-4 bg-lightMode-bg dark:bg-darkMode-element shadow-lg rounded"
