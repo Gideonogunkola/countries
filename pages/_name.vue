@@ -93,7 +93,7 @@
             </div>
           </div>
         </div>
-        <div class="mt-24 flex items-center">
+        <div class="mt-24 flex flex-wrap items-center">
           <p><span class="font-medium pr-3">Border Countries:</span></p>
           <div
             v-for="(border, index) in country[0].borders"
@@ -101,7 +101,7 @@
             class="flex flex-wrap"
           >
             <div
-              class=" mr-3 py-1 px-4 bg-lightMode-bg dark:bg-darkMode-element shadow-lg rounded"
+              class="mt-2 mr-3 py-1 px-4 bg-lightMode-bg dark:bg-darkMode-element shadow-lg rounded"
             >
               {{ border }}
             </div>
