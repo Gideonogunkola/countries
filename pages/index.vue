@@ -3,7 +3,7 @@
     <div>
       <Form />
     </div>
-    <h1 v-if="getFetchLoading" class="text-xl lg:text-3xl text-center">
+    <h1 v-if="getFetchLoading" class="mt-20 text-xl lg:text-3xl text-center">
       Loading.....
     </h1>
     <div v-else class="flex justify-center lg:justify-between flex-wrap">

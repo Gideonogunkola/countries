@@ -24,6 +24,13 @@ export const actions = {
       console.log(error);
       commit("SET_FETCH_LOADING", false);
     }
+  },
+
+  async searchCountries({ commit, state }, search) {
+    const filtered = state.countries.filter(newsearch =>
+      newsearch.name.toLowerCase().includes(search.toLowerCase())
+    );
+    commit("FILTER_COUNTRY", filtered);
   }
 };
 
@@ -34,5 +41,8 @@ export const mutations = {
   },
   SET_FETCH_LOADING(state, loading) {
     state.fetchloading = loading;
+  },
+  FILTER_COUNTRY(state, filtered) {
+    state.countries = filtered;
   }
 };

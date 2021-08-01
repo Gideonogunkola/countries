@@ -7,6 +7,8 @@
         <input
           type="search"
           class="w-full lg:w-4/6 h-14 rounded bg-white shadow dark:bg-darkMode-element border-0 focus:border-transparent focus:ring-0 px-14"
+          v-model.trim="search"
+          @keypress="searchResult"
         />
         <font-awesome-icon
           class="absolute top-5 left-8"
@@ -30,7 +32,20 @@
 </template>
 
 <script>
-export default {};
+import { mapActions } from "vuex";
+export default {
+  data() {
+    return {
+      search: ""
+    };
+  },
+  methods: {
+    ...mapActions(["searchCountries"]),
+    searchResult() {
+      this.searchCountries(this.search);
+    }
+  }
+};
 </script>
 
 <style></style>
